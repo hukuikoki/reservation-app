@@ -8,7 +8,8 @@ import { ProductListComponent } from './product-listings/product-listings.compon
 
 const routes: Routes = [
   {
-    path: 'products', component: ProductComponent,
+    path: 'products',
+    component: ProductComponent,
     children: [
       { path: '', component: ProductListComponent },
       { path: ':productId', component: ProductDetailComponent }
@@ -22,11 +23,8 @@ const routes: Routes = [
     ProductDetailComponent,
     ProductListComponent
   ],
-  imports: [
-    RouterModule.forChild(routes),
-    CommonModule
-  ],
+  imports: [RouterModule.forChild(routes), CommonModule],
   providers: [],
   bootstrap: []
 })
-export class ProductModule { }
+export class ProductModule {}

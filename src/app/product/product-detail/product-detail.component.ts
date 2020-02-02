@@ -9,14 +9,13 @@ import { products } from 'src/app/products';
   styleUrls: ['./product-detail.component.scss']
 })
 export class ProductDetailComponent implements OnInit {
-  product: { name: string; price: number; description: string; };
+  product: { name: string; price: number; description: string };
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.product = products[+params.get('productId')];
     });
   }
-
 }

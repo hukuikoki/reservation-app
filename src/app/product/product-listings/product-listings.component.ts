@@ -8,12 +8,11 @@ import { products } from 'src/app/products';
   styleUrls: ['./product-listings.component.scss']
 })
 export class ProductListComponent implements OnInit {
-products: any;
+  products: any;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     this.products = products;
   }
-
 }
